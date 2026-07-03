@@ -1,0 +1,25 @@
+# Coinbase Bug Bounty - In-Scope Targets (July 3, 2026)
+# Source: HackerOne program handle: coinbase
+# Generated: 2026-07-03
+
+# Wildcards (all eligible for bounty, max critical)
+*.coinbase.com
+*.cbhq.net
+*.coinbase-corp.com
+
+# URLs (eligible for bounty)
+coinbase.com
+api.coinbase.com
+pro.coinbase.com
+prime.coinbase.com
+institutional.coinbase.com
+international.coinbase.com
+commerce.coinbase.com
+custody.coinbase.com
+cloud.coinbase.com
+nft.coinbase.com
+api.custody.coinbase.com
+
+# Source code
+https://github.com/coinbase/cb-mpc
+https://github.com/coinbase/cb-mpc-go
