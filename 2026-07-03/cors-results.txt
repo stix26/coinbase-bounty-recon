@@ -1,0 +1,110 @@
+FOUND CORS on accounts.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on blockchain.wallet.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on cdpstatus.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on dma.prime.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on exchange.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on fp.coinbase.com
+  evil: access-control-allow-credentials: true
+ access-control-allow-origin: https://evil.com
+ 
+  null: access-control-allow-credentials: true
+ access-control-allow-origin: null
+ 
+---
+FOUND CORS on go.zero.coinbase-corp.com
+  evil: access-control-allow-credentials: true
+ access-control-allow-origin: https://evil.com
+ 
+  null: access-control-allow-credentials: true
+ access-control-allow-origin: null
+ 
+---
+FOUND CORS on public-sandbox.exchange.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on search.travel.coinbase.com
+  evil: access-control-allow-credentials: true
+ 
+  null: access-control-allow-credentials: true
+ 
+---
+FOUND CORS on status.cde.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.commerce.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.custody.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.exchange.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.international.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on status.prime.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on tokenmanager.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
+FOUND CORS on widget.coinbase.com
+  evil: access-control-allow-origin: *
+ 
+  null: access-control-allow-origin: *
+ 
+---
