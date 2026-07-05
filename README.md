@@ -1,29 +1,10 @@
 # Coinbase Bug Bounty Reconnaissance
 
-Reconnaissance pipeline output for the Coinbase bug bounty program on HackerOne.
+Bug bounty recon pipeline output for Coinbase (hackerone.com/coinbase).
 
-## Session: 2026-07-03
-
-- **Subdomains enumerated:** 428 (coinbase.com, cbhq.net, coinbase-corp.com)
-- **Live hosts found:** 116
-- **CORS findings:** 18 (1 potentially reportable)
-- **Exposed files:** None confirmed
-- **GitHub secrets:** None found
-- **Reportable findings:** 1 candidate — fp.coinbase.com CORS
-
-## Scope
-
-- `*.coinbase.com` (max severity: critical)
-- `*.cbhq.net` (max severity: critical)
-- `*.coinbase-corp.com` (max severity: critical)
-- Key URLs: api.coinbase.com, pro.coinbase.com, prime.coinbase.com, commerce.coinbase.com, custody.coinbase.com, cloud.coinbase.com
-- Source code: `github.com/coinbase/cb-mpc`, `github.com/coinbase/cb-mpc-go`
-
-## Methodology
-
-1. Subdomain enumeration (subfinder)
-2. HTTP probing (curl)
-3. CORS misconfiguration testing
-4. Exposed file scanning
-5. GitHub commit analysis for secret leaks
-6. API endpoint discovery
+## Session: 2026-07-05
+- **Subdomains found:** 489
+- **Live hosts:** www(403), prime(200), exchange(200), commerce(302)
+- **CORS: exchange.coinbase.com — Wildcard CORS (`Access-Control-Allow-Origin: *`)**
+- **CORS: api.exchange.coinbase.com — Wildcard CORS on REST API**
+- **Status:** Finding identified — see cors-tests.txt and deep-dive.txt
