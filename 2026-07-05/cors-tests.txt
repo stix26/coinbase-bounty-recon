@@ -1,4 +1,0 @@
-=== Coinbase ===
-exchange.coinbase.com: access-control-allow-origin: * (WILDCARD)
-api.exchange.coinbase.com: access-control-allow-origin: * (WILDCARD)
-Other Coinbase hosts: No CORS wildcards
