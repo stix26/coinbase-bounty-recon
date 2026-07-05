@@ -1,0 +1,3 @@
+# Coinbase - Nuclei Findings
+## Info
+- azure-domain-tenant: coinbase.com uses Azure AD (tenant: 3d309027-3cd0-4b06-86b6-5150f8834c76)

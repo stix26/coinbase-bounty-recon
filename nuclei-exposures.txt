@@ -1,0 +1,1 @@
+[azure-domain-tenant] [http] [info] https://login.microsoftonline.com:443/coinbase.com/v2.0/.well-known/openid-configuration ["3d309027-3cd0-4b06-86b6-5150f8834c76"]

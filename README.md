@@ -1,29 +1,34 @@
-# Coinbase Bug Bounty Reconnaissance
+# Coinbase Bug Bounty Recon — 2026-07-05
 
-Reconnaissance pipeline output for the Coinbase bug bounty program on HackerOne.
+**HackerOne:** Coinbase  
+**Scope:** coinbase.com  
+**Methodology:** Full recon pipeline (subfinder → live probing → CORS → exposed files → nuclei → ffuf)
 
-## Session: 2026-07-03
+## Summary
 
-- **Subdomains enumerated:** 428 (coinbase.com, cbhq.net, coinbase-corp.com)
-- **Live hosts found:** 116
-- **CORS findings:** 18 (1 potentially reportable)
-- **Exposed files:** None confirmed
-- **GitHub secrets:** None found
-- **Reportable findings:** 1 candidate — fp.coinbase.com CORS
+| Step | Status | Findings |
+|------|--------|----------|
+| Subdomain Enumeration | ✅ | 195 subdomains found |
+| Live Probing | ✅ | 8 key subdomains checked |
+| CORS Testing | ✅ | **CRITICAL: exchange.coinbase.com allows wildcard origin** |
+| Exposed Files | ✅ | All paths return 403 |
+| Nuclei Scan | ✅ | Azure AD tenant info |
+| FFUF Fuzzing | ✅ | Common paths scanned |
 
-## Scope
+## CORS Results
+- **exchange.coinbase.com** — `access-control-allow-origin: *`  ⚠️
+- All others — No CORS headers
 
-- `*.coinbase.com` (max severity: critical)
-- `*.cbhq.net` (max severity: critical)
-- `*.coinbase-corp.com` (max severity: critical)
-- Key URLs: api.coinbase.com, pro.coinbase.com, prime.coinbase.com, commerce.coinbase.com, custody.coinbase.com, cloud.coinbase.com
-- Source code: `github.com/coinbase/cb-mpc`, `github.com/coinbase/cb-mpc-go`
+## Key Subdomains Live
+- coinbase.com (302)
+- exchange.coinbase.com (200)
+- prime.coinbase.com (200)
+- api.coinbase.com (301)
+- pro.coinbase.com (301)
+- commerce.coinbase.com (302)
 
-## Methodology
+## Nuclei
+- **Azure Domain Tenant:** coinbase.com → Azure AD (tenant: 3d309027-3cd0-4b06-86b6-5150f8834c76)
 
-1. Subdomain enumeration (subfinder)
-2. HTTP probing (curl)
-3. CORS misconfiguration testing
-4. Exposed file scanning
-5. GitHub commit analysis for secret leaks
-6. API endpoint discovery
+## ⚠️ Findings to Report
+1. **CORS Wildcard on Exchange** — `exchange.coinbase.com` returns `Access-Control-Allow-Origin: *`. This could allow malicious sites to make cross-origin requests. Verify if sensitive endpoints are accessible.

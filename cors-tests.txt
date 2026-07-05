@@ -1,0 +1,5 @@
+coinbase.com: No CORS headers
+www.coinbase.com: No CORS headers
+api.coinbase.com: No CORS headers
+exchange.coinbase.com: access-control-allow-origin: *
+prime.coinbase.com: No CORS headers
